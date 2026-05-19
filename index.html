@@ -32,7 +32,6 @@
     overflow-x: hidden;
   }
 
-  /* ── AUTH SCREEN ─────────────────────────────────── */
   #auth-screen {
     min-height: 100vh;
     display: grid;
@@ -203,7 +202,6 @@
 
   .demo-hint a { color: var(--accent); text-decoration: none; font-weight: 600; cursor: pointer; }
 
-  /* ── APP SHELL ───────────────────────────────────── */
   #app { display: none; min-height: 100vh; }
 
   .sidebar {
@@ -313,7 +311,6 @@
 
   .logout-btn:hover { color: rgba(255,255,255,0.6); }
 
-  /* ── MAIN CONTENT ────────────────────────────────── */
   .main { margin-left: var(--sidebar-w); min-height: 100vh; }
 
   .topbar {
@@ -356,11 +353,9 @@
 
   .content { padding: 32px 36px; }
 
-  /* ── PAGES ───────────────────────────────────────── */
   .page { display: none; }
   .page.active { display: block; }
 
-  /* ── DASHBOARD ───────────────────────────────────── */
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -439,7 +434,6 @@
     cursor: pointer;
   }
 
-  /* ── CLIENTS ─────────────────────────────────────── */
   .search-bar { display: flex; gap: 12px; margin-bottom: 22px; }
 
   .search-bar input {
@@ -555,7 +549,6 @@
 
   .action-btn.primary-action:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
-  /* ── REMINDERS ───────────────────────────────────── */
   .reminder-list { display: flex; flex-direction: column; gap: 12px; }
 
   .reminder-item {
@@ -606,7 +599,6 @@
   .reminder-status.sent { background: rgba(52,199,123,0.12); color: var(--success); border: 1px solid rgba(52,199,123,0.2); }
   .reminder-status.overdue { background: rgba(220,38,38,0.15); color: #f87171; border: 1px solid rgba(220,38,38,0.25); }
 
-  /* ── MODAL ───────────────────────────────────────── */
   .modal-overlay {
     display: none;
     position: fixed;
@@ -677,7 +669,6 @@
 
   .textarea-field:focus { border-color: var(--accent); }
 
-  /* ── RECENT ACTIVITY ──────────────────────────── */
   .activity-list { padding: 0 22px; }
 
   .activity-item {
@@ -705,7 +696,6 @@
   .activity-text strong { font-weight: 600; color: var(--ink); }
   .activity-time { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
 
-  /* ── UPCOMING TASKS ──────────────────────────── */
   .task-list { padding: 0 22px; }
 
   .task-item {
@@ -739,7 +729,6 @@
   .task-due { font-size: 0.75rem; color: var(--muted); }
   .task-due.urgent { color: var(--accent); font-weight: 600; }
 
-  /* ── TOAST ───────────────────────────────────── */
   .toast-container {
     position: fixed;
     bottom: 28px;
@@ -761,7 +750,7 @@
     align-items: center;
     gap: 10px;
     animation: slideUp 0.3s ease;
-    max-width: 300px;
+    max-width: 320px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
   }
 
@@ -773,13 +762,11 @@
   .toast.success { background: rgba(52,199,123,0.15); border-color: rgba(52,199,123,0.3); color: #6ee7b7; }
   .toast.warning { background: rgba(232,98,42,0.15); border-color: rgba(232,98,42,0.3); color: #fdba8a; }
 
-  /* ── EMPTY STATE ──────────────────────────────── */
   .empty-state { text-align: center; padding: 60px 20px; color: var(--muted); }
   .empty-state .big-icon { font-size: 3rem; margin-bottom: 14px; opacity: 0.3; }
   .empty-state h3 { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: rgba(240,237,232,0.5); margin-bottom: 8px; }
   .empty-state p { font-size: 0.88rem; }
 
-  /* ── PROFILE PAGE ─────────────────────────────── */
   .profile-section {
     background: var(--card);
     border: 1px solid var(--border);
@@ -799,7 +786,6 @@
 
   .two-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-  /* ── COLOR AVATARS ────────────────────────────── */
   .color-1 { background: #e8622a; }
   .color-2 { background: #3b82f6; }
   .color-3 { background: #8b5cf6; }
@@ -807,7 +793,6 @@
   .color-5 { background: #f59e0b; }
   .color-6 { background: #ec4899; }
 
-  /* ── SCROLLBAR ────────────────────────────────── */
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: var(--paper); }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
@@ -816,7 +801,6 @@
 </head>
 <body>
 
-<!-- ── AUTH SCREEN ──────────────────────────────── -->
 <div id="auth-screen">
   <div class="auth-left">
     <div class="brand">free<span>lio</span></div>
@@ -825,18 +809,9 @@
       <p>Automatize lembretes, acompanhe pagamentos e mantenha todos os seus projetos freelancer organizados em um só lugar.</p>
     </div>
     <div class="auth-stats">
-      <div class="auth-stat">
-        <strong>2.4k</strong>
-        <span>Freelancers</span>
-      </div>
-      <div class="auth-stat">
-        <strong>18k</strong>
-        <span>Clientes gerenciados</span>
-      </div>
-      <div class="auth-stat">
-        <strong>98%</strong>
-        <span>Taxa de retenção</span>
-      </div>
+      <div class="auth-stat"><strong>2.4k</strong><span>Freelancers</span></div>
+      <div class="auth-stat"><strong>18k</strong><span>Clientes gerenciados</span></div>
+      <div class="auth-stat"><strong>98%</strong><span>Taxa de retenção</span></div>
     </div>
   </div>
 
@@ -850,7 +825,6 @@
         <button class="tab-btn" onclick="switchTab('register')">Criar conta</button>
       </div>
 
-      <!-- LOGIN FORM -->
       <div id="login-form">
         <div class="form-field">
           <label>E-mail</label>
@@ -864,7 +838,6 @@
         <p class="demo-hint">Já preenchido com dados de demo — <a onclick="doLogin()">entrar agora</a></p>
       </div>
 
-      <!-- REGISTER FORM -->
       <div id="register-form" style="display:none">
         <div class="form-field">
           <label>Nome completo</label>
@@ -888,9 +861,7 @@
   </div>
 </div>
 
-<!-- ── APP SHELL ──────────────────────────────────── -->
 <div id="app">
-  <!-- SIDEBAR -->
   <nav class="sidebar">
     <div class="brand">free<span>lio</span></div>
 
@@ -921,7 +892,6 @@
       <span class="nav-badge" id="badge-dev">0</span>
     </div>
 
-
     <div class="sidebar-footer">
       <div class="user-chip">
         <div class="avatar" id="sidebar-avatar">?</div>
@@ -934,9 +904,7 @@
     </div>
   </nav>
 
-  <!-- MAIN -->
   <main class="main">
-    <!-- TOPBAR -->
     <div class="topbar">
       <div class="topbar-title" id="topbar-title">Dashboard</div>
       <div class="topbar-actions" id="topbar-actions">
@@ -946,7 +914,7 @@
 
     <div class="content">
 
-      <!-- ── DASHBOARD ── -->
+      <!-- DASHBOARD -->
       <div class="page active" id="page-dashboard">
         <div class="stats-grid">
           <div class="stat-card" data-icon="👥">
@@ -1000,7 +968,7 @@
         </div>
       </div>
 
-      <!-- ── CLIENTS ── -->
+      <!-- CLIENTS -->
       <div class="page" id="page-clients">
         <div class="search-bar">
           <input type="text" placeholder="🔍  Buscar clientes por nome, empresa ou status..." oninput="filterClients(this.value)" id="client-search">
@@ -1015,7 +983,7 @@
         </div>
       </div>
 
-      <!-- ── REMINDERS ── -->
+      <!-- REMINDERS -->
       <div class="page" id="page-reminders">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:22px">
           <div>
@@ -1033,27 +1001,15 @@
         </div>
       </div>
 
-      <!-- ── PROFILE ── -->
+      <!-- PROFILE -->
       <div class="page" id="page-profile">
         <div class="profile-section">
           <h3>Informações pessoais</h3>
           <div class="two-fields">
-            <div class="form-field">
-              <label>Nome completo</label>
-              <input type="text" class="profile-input" id="p-name">
-            </div>
-            <div class="form-field">
-              <label>Profissão</label>
-              <input type="text" class="profile-input" id="p-job">
-            </div>
-            <div class="form-field">
-              <label>E-mail</label>
-              <input type="email" class="profile-input" id="p-email">
-            </div>
-            <div class="form-field">
-              <label>Telefone</label>
-              <input type="text" class="profile-input" id="p-phone" placeholder="(11) 99999-9999">
-            </div>
+            <div class="form-field"><label>Nome completo</label><input type="text" class="profile-input" id="p-name"></div>
+            <div class="form-field"><label>Profissão</label><input type="text" class="profile-input" id="p-job"></div>
+            <div class="form-field"><label>E-mail</label><input type="email" class="profile-input" id="p-email"></div>
+            <div class="form-field"><label>Telefone</label><input type="text" class="profile-input" id="p-phone" placeholder="(11) 99999-9999"></div>
           </div>
         </div>
         <div class="profile-section">
@@ -1062,18 +1018,13 @@
             <div class="form-field">
               <label>Canal padrão</label>
               <select class="select-field" id="p-channel">
-                <option>E-mail</option>
-                <option>WhatsApp</option>
-                <option>SMS</option>
+                <option>E-mail</option><option>WhatsApp</option><option>SMS</option>
               </select>
             </div>
             <div class="form-field">
               <label>Antecedência padrão</label>
               <select class="select-field" id="p-advance">
-                <option>1 dia antes</option>
-                <option>2 dias antes</option>
-                <option>3 dias antes</option>
-                <option>1 semana antes</option>
+                <option>1 dia antes</option><option>2 dias antes</option><option>3 dias antes</option><option>1 semana antes</option>
               </select>
             </div>
           </div>
@@ -1081,7 +1032,7 @@
         <button class="btn-sm filled" onclick="saveProfile()">Salvar alterações</button>
       </div>
 
-<!-- ── DEV AREA ── -->
+      <!-- DEV AREA -->
       <div class="page" id="page-dev">
         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:22px; gap:16px">
           <div>
@@ -1115,10 +1066,9 @@
         </div>
       </div>
 
-      <!-- ── INTEGRATIONS ── -->
+      <!-- INTEGRATIONS -->
       <div class="page" id="page-integrations">
 
-        <!-- STATUS BANNER -->
         <div id="integration-status-banner" style="display:none; margin-bottom:20px; padding:14px 20px; border-radius:10px; font-size:0.88rem; font-weight:500; border:1.5px solid;"></div>
 
         <!-- EMAILJS -->
@@ -1180,7 +1130,7 @@
             <strong style="color:var(--ink);display:block;margin-bottom:6px">📋 Como configurar (10 minutos):</strong>
             1. Acesse <a href="https://app.z-api.io" target="_blank" style="color:var(--accent);font-weight:600">app.z-api.io</a> e crie uma conta<br>
             2. Crie uma nova instância e escaneie o QR Code com seu WhatsApp<br>
-            3. No painel da instância, copie o <strong>Instance ID</strong> e o <strong>Token</strong><br>
+            3. No painel da instância, copie o <strong>Instance ID</strong> e o <strong>Token</strong> (só o código, sem URLs)<br>
             4. Cole abaixo e salve — pronto para enviar mensagens reais!<br>
             <strong style="color:var(--accent)">⚠️ Atenção:</strong> use um número de WhatsApp exclusivo para a plataforma (não seu pessoal) para evitar banimentos.
           </div>
@@ -1191,7 +1141,7 @@
               <input type="text" id="zapi-instance" placeholder="ex: 3A123B456C789D" style="font-family:monospace;font-size:0.85rem">
             </div>
             <div class="form-field">
-              <label>Token</label>
+              <label>Token (só o código, sem /send-text)</label>
               <input type="text" id="zapi-token" placeholder="ex: ABCDEF1234567890abcdef" style="font-family:monospace;font-size:0.85rem">
             </div>
           </div>
@@ -1222,42 +1172,22 @@
 
       </div>
 
-    </div><!-- /content -->
+    </div>
   </main>
 </div>
 
-<!-- ── MODALS ───────────────────────────────────────── -->
-
-<!-- NEW CLIENT -->
+<!-- MODALS -->
 <div class="modal-overlay" id="modal-client">
   <div class="modal">
     <h2>Novo cliente</h2>
     <p class="sub">Preencha as informações para cadastrar um novo cliente.</p>
     <div class="two-fields">
-      <div class="form-field">
-        <label>Nome</label>
-        <input type="text" id="c-name" placeholder="Nome do cliente">
-      </div>
-      <div class="form-field">
-        <label>Empresa</label>
-        <input type="text" id="c-company" placeholder="Empresa (opcional)">
-      </div>
-      <div class="form-field">
-        <label>E-mail</label>
-        <input type="email" id="c-email" placeholder="cliente@empresa.com">
-      </div>
-      <div class="form-field">
-        <label>WhatsApp</label>
-        <input type="text" id="c-phone" placeholder="(11) 99999-9999">
-      </div>
-      <div class="form-field">
-        <label>Projeto</label>
-        <input type="text" id="c-project" placeholder="Nome do projeto">
-      </div>
-      <div class="form-field">
-        <label>Valor (R$)</label>
-        <input type="number" id="c-value" placeholder="0,00">
-      </div>
+      <div class="form-field"><label>Nome</label><input type="text" id="c-name" placeholder="Nome do cliente"></div>
+      <div class="form-field"><label>Empresa</label><input type="text" id="c-company" placeholder="Empresa (opcional)"></div>
+      <div class="form-field"><label>E-mail</label><input type="email" id="c-email" placeholder="cliente@empresa.com"></div>
+      <div class="form-field"><label>WhatsApp</label><input type="text" id="c-phone" placeholder="(11) 99999-9999"></div>
+      <div class="form-field"><label>Projeto</label><input type="text" id="c-project" placeholder="Nome do projeto"></div>
+      <div class="form-field"><label>Valor (R$)</label><input type="number" id="c-value" placeholder="0,00"></div>
     </div>
     <div class="form-field" style="margin-top:4px">
       <label>Status</label>
@@ -1274,15 +1204,11 @@
   </div>
 </div>
 
-<!-- NEW REMINDER -->
 <div class="modal-overlay" id="modal-reminder">
   <div class="modal">
     <h2>Agendar lembrete</h2>
     <p class="sub">Configure o lembrete automático para um cliente.</p>
-    <div class="form-field">
-      <label>Cliente</label>
-      <select class="select-field" id="r-client"></select>
-    </div>
+    <div class="form-field"><label>Cliente</label><select class="select-field" id="r-client"></select></div>
     <div class="two-fields">
       <div class="form-field">
         <label>Tipo</label>
@@ -1292,10 +1218,7 @@
           <option value="sms">📱 SMS</option>
         </select>
       </div>
-      <div class="form-field">
-        <label>Data de envio</label>
-        <input type="date" class="select-field" id="r-date">
-      </div>
+      <div class="form-field"><label>Data de envio</label><input type="date" class="select-field" id="r-date"></div>
     </div>
     <div class="form-field">
       <label>Motivo</label>
@@ -1308,10 +1231,7 @@
         <option>Outro</option>
       </select>
     </div>
-    <div class="form-field">
-      <label>Mensagem personalizada</label>
-      <textarea class="textarea-field" id="r-msg" placeholder="Escreva sua mensagem..."></textarea>
-    </div>
+    <div class="form-field"><label>Mensagem personalizada</label><textarea class="textarea-field" id="r-msg" placeholder="Escreva sua mensagem..."></textarea></div>
     <div class="modal-footer">
       <button class="btn-sm" onclick="closeModal('reminder')">Cancelar</button>
       <button class="btn-sm filled" onclick="saveReminder()">Agendar lembrete</button>
@@ -1319,20 +1239,13 @@
   </div>
 </div>
 
-<!-- NEW TASK -->
 <div class="modal-overlay" id="modal-task">
   <div class="modal">
     <h2>Nova tarefa</h2>
     <p class="sub">Adicione uma tarefa ao seu painel.</p>
-    <div class="form-field">
-      <label>Descrição</label>
-      <input type="text" id="t-desc" placeholder="O que precisa ser feito?">
-    </div>
+    <div class="form-field"><label>Descrição</label><input type="text" id="t-desc" placeholder="O que precisa ser feito?"></div>
     <div class="two-fields">
-      <div class="form-field">
-        <label>Data limite</label>
-        <input type="date" class="select-field" id="t-due">
-      </div>
+      <div class="form-field"><label>Data limite</label><input type="date" class="select-field" id="t-due"></div>
       <div class="form-field">
         <label>Urgência</label>
         <select class="select-field" id="t-urgent">
@@ -1348,7 +1261,6 @@
   </div>
 </div>
 
-<!-- TOAST CONTAINER -->
 <div class="toast-container" id="toast-container"></div>
 
 <script>
@@ -1363,7 +1275,6 @@ let state = {
   devSignups: []
 };
 
-// ── PERSIST ────────────────────────────────────────────
 function save() { localStorage.setItem('freelio', JSON.stringify(state)); }
 
 function load() {
@@ -1383,9 +1294,7 @@ function doLogin() {
   const pass = document.getElementById('login-pass').value;
   if (!email) { toast('Informe seu e-mail','warning'); return; }
   if (!pass) { toast('Informe sua senha','warning'); return; }
-
   load();
-  // Find existing user or create demo
   let user = state.user;
   if (!user || user.email !== email) {
     if (email === 'demo@freelio.com') {
@@ -1407,20 +1316,15 @@ function doRegister() {
   if (!name||!email||!job||!pass) { toast('Preencha todos os campos','warning'); return; }
   if (pass.length < 6) { toast('Senha deve ter no mínimo 6 caracteres','warning'); return; }
   load();
-
-  // Registra cadastro para a Área Dev (localmente)
   state.devSignups = state.devSignups || [];
   const signup = {
     id: Date.now(),
-    name,
-    email,
-    job,
+    name, email, job,
     createdAt: new Date().toLocaleString('pt-BR', { dateStyle:'short', timeStyle:'short' }),
     status: 'new'
   };
   state.devSignups.unshift(signup);
   if (state.devSignups.length > 200) state.devSignups = state.devSignups.slice(0, 200);
-
   state.user = { name, email, job, phone:'' };
   state.clients = []; state.reminders = []; state.tasks = []; state.activities = [];
   save();
@@ -1443,7 +1347,6 @@ function enterApp() {
   updateIntegrationUI();
 }
 
-// ── USER ──────────────────────────────────────────────
 function populateUser() {
   const u = state.user;
   document.getElementById('sidebar-avatar').textContent = u.name.charAt(0).toUpperCase();
@@ -1463,29 +1366,22 @@ function saveProfile() {
   save(); populateUser(); toast('Perfil atualizado!','success');
 }
 
-// ── NAVIGATION ──────────────────────────────────────────
 function navigate(page) {
   document.querySelectorAll('.nav-item').forEach(el=>{
     el.classList.toggle('active', el.getAttribute('onclick').includes(`'${page}'`));
   });
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(`page-${page}`).classList.add('active');
-
-  const titles = { dashboard:'Dashboard', clients:'Clientes', reminders:'Lembretes', profile:'Configurações', integrations:'Integrações' };
-  document.getElementById('topbar-title').textContent = titles[page];
-
+  const titles = { dashboard:'Dashboard', clients:'Clientes', reminders:'Lembretes', profile:'Configurações', integrations:'Integrações', dev:'Área Dev' };
+  document.getElementById('topbar-title').textContent = titles[page] || page;
   const actionsMap = {
     dashboard: '<button class="btn-sm filled" onclick="openModal(\'client\')">+ Novo cliente</button>',
-    clients: '',
-    reminders: '',
-    profile: '',
-    integrations: ''
+    clients: '', reminders: '', profile: '', integrations: '', dev: ''
   };
   document.getElementById('topbar-actions').innerHTML = actionsMap[page] || '';
   if (page === 'integrations') setTimeout(updateIntegrationUI, 50);
 }
 
-// ── MODALS ──────────────────────────────────────────────
 function openModal(type) {
   if (type === 'reminder') {
     const sel = document.getElementById('r-client');
@@ -1502,13 +1398,11 @@ function closeModal(type) {
   document.getElementById(`modal-${type}`).classList.remove('open');
 }
 
-// ── CLIENTS ──────────────────────────────────────────────
 function saveClient() {
   const name = document.getElementById('c-name').value.trim();
   if (!name) { toast('Informe o nome do cliente','warning'); return; }
   const client = {
-    id: Date.now(),
-    name,
+    id: Date.now(), name,
     company: document.getElementById('c-company').value.trim(),
     email: document.getElementById('c-email').value.trim(),
     phone: document.getElementById('c-phone').value.trim(),
@@ -1521,16 +1415,12 @@ function saveClient() {
   state.clients.push(client);
   addActivity(`Cliente <strong>${name}</strong> cadastrado`, '👥');
   save(); closeModal('client'); renderAll(); toast(`${name} adicionado!`,'success');
-
-  // Clear fields
   ['c-name','c-company','c-email','c-phone','c-project','c-value'].forEach(id=>document.getElementById(id).value='');
 }
 
 function filterClients(q) {
-  const items = document.querySelectorAll('.client-card');
-  items.forEach(el=>{
-    const text = el.dataset.search.toLowerCase();
-    el.style.display = text.includes(q.toLowerCase()) ? '' : 'none';
+  document.querySelectorAll('.client-card').forEach(el=>{
+    el.style.display = el.dataset.search.toLowerCase().includes(q.toLowerCase()) ? '' : 'none';
   });
 }
 
@@ -1541,7 +1431,6 @@ function deleteClient(id) {
   save(); renderAll(); toast('Cliente removido');
 }
 
-// ── REMINDERS ────────────────────────────────────────────
 function saveReminder() {
   const clientId = parseInt(document.getElementById('r-client').value);
   const client = state.clients.find(c=>c.id===clientId);
@@ -1551,12 +1440,9 @@ function saveReminder() {
   const typeIcons = { email:'📧', whatsapp:'💬', sms:'📱' };
   const type = document.getElementById('r-type').value;
   const reminder = {
-    id: Date.now(),
-    clientId,
+    id: Date.now(), clientId,
     clientName: client.name,
-    type,
-    typeIcon: typeIcons[type],
-    date,
+    type, typeIcon: typeIcons[type], date,
     reason: document.getElementById('r-reason').value,
     message: document.getElementById('r-msg').value,
     status: 'scheduled'
@@ -1570,20 +1456,16 @@ function saveReminder() {
 function sendNow(id) {
   const r = state.reminders.find(x=>x.id===id);
   if (!r) return;
-
-  if (r.type === 'email') {
-    sendEmail(r);
-  } else if (r.type === 'whatsapp') {
-    sendWhatsApp(r);
-  } else {
-    // SMS — mark as sent (no integration yet)
+  if (r.type === 'email') sendEmail(r);
+  else if (r.type === 'whatsapp') sendWhatsApp(r);
+  else {
     r.status = 'sent';
     addActivity(`Lembrete SMS marcado para <strong>${r.clientName}</strong>`, '📱');
     save(); renderAll(); toast('SMS marcado como enviado (integração não configurada)','warning');
   }
 }
 
-// ── EMAILJS INTEGRATION ──────────────────────────────────
+// ── EMAILJS ───────────────────────────────────────────
 function getEmailJSConfig() {
   return {
     pubkey:   localStorage.getItem('ejs_pubkey')   || '',
@@ -1615,32 +1497,24 @@ function testEmailJS() {
 
 async function sendEmailRaw(toEmail, toName, subject, message) {
   const cfg = getEmailJSConfig();
-  // Load EmailJS SDK on demand
   await loadScript('https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js');
   emailjs.init(cfg.pubkey);
   return emailjs.send(cfg.service, cfg.template, {
-    to_email: toEmail,
-    to_name:  toName,
-    subject:  subject,
-    message:  message,
+    to_email: toEmail, to_name: toName,
+    subject, message,
     from_name: state.user?.name || 'Freelio'
   });
 }
 
 async function sendEmail(r) {
   const cfg = getEmailJSConfig();
-  if (!cfg.pubkey) {
-    toast('Configure o EmailJS em Integrações para enviar e-mails reais','warning');
-    return;
-  }
+  if (!cfg.pubkey) { toast('Configure o EmailJS em Integrações para enviar e-mails reais','warning'); return; }
   const client = state.clients.find(c=>c.id===r.clientId);
   if (!client?.email) { toast('Cliente sem e-mail cadastrado','warning'); return; }
-
   toast('Enviando e-mail...','');
   try {
     await sendEmailRaw(
-      client.email,
-      client.name,
+      client.email, client.name,
       r.reason + ' — ' + (client.project || 'Projeto'),
       r.message || `Olá ${client.name}, este é um lembrete automático da plataforma Freelio.\n\nMotivo: ${r.reason}`
     );
@@ -1652,7 +1526,7 @@ async function sendEmail(r) {
   }
 }
 
-// ── ZAPI INTEGRATION ─────────────────────────────────────
+// ── Z-API ─────────────────────────────────────────────
 function getZAPIConfig() {
   return {
     instance: localStorage.getItem('zapi_instance') || '',
@@ -1662,15 +1536,32 @@ function getZAPIConfig() {
 }
 
 function saveZAPIConfig() {
-  const inst = document.getElementById('zapi-instance').value.trim();
-  const tok  = document.getElementById('zapi-token').value.trim();
+  let inst = document.getElementById('zapi-instance').value.trim();
+  let tok  = document.getElementById('zapi-token').value.trim();
   const tnum = document.getElementById('zapi-testnum').value.trim();
 
   if (!inst||!tok) { toast('Preencha Instance ID e Token da Z-API','warning'); return; }
 
+  // ── Sanitização automática ─────────────────────────
+  // Remove qualquer URL que o usuário tenha colado por engano
+  // Ex: "https://api.z-api.io/instances/XXX/token/YYY/send-text" → extrai só o token
+  const tokenUrlMatch = tok.match(/\/token\/([^\/]+)/);
+  if (tokenUrlMatch) tok = tokenUrlMatch[1];
+
+  const instanceUrlMatch = inst.match(/\/instances\/([^\/]+)/);
+  if (instanceUrlMatch) inst = instanceUrlMatch[1];
+
+  // Remove /send-text ou qualquer path residual
+  tok  = tok.replace(/\/.*$/, '').trim();
+  inst = inst.replace(/\/.*$/, '').trim();
+
   localStorage.setItem('zapi_instance', inst);
   localStorage.setItem('zapi_token', tok);
   localStorage.setItem('zapi_testnum', tnum);
+
+  // Atualiza os campos com os valores limpos
+  document.getElementById('zapi-instance').value = inst;
+  document.getElementById('zapi-token').value = tok;
 
   updateIntegrationUI();
   toast('Configuração Z-API salva!','success');
@@ -1685,29 +1576,49 @@ function testZAPI() {
     .catch(e=> toast('Erro Z-API: '+(e.message||JSON.stringify(e)),'warning'));
 }
 
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// CORREÇÃO CORS: usa corsproxy.io para contornar o bloqueio
+// do browser ao chamar api.z-api.io direto do GitHub Pages
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 async function sendWhatsAppRaw(phone, message) {
   const cfg = getZAPIConfig();
-  // Normalise phone: remove non-digits, ensure DDI
-  const num = phone.replace(/\D/g,'');
-  const url = `https://api.z-api.io/instances/${cfg.instance}/token/${cfg.token}/send-text`;
-  const res = await fetch(url, {
+  const num = phone.replace(/\D/g, '');
+
+  const zapiUrl = `https://api.z-api.io/instances/${cfg.instance}/token/${cfg.token}/send-text`;
+
+  // Tenta direto primeiro; se falhar por CORS, usa proxy
+  const tryFetch = async (url, opts) => {
+    const res = await fetch(url, opts);
+    if (!res.ok) {
+      let errMsg = 'Erro HTTP ' + res.status;
+      try { const j = await res.json(); errMsg = j.message || j.error || errMsg; } catch(_) {}
+      throw new Error(errMsg);
+    }
+    return res.json();
+  };
+
+  const opts = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ phone: num, message })
-  });
-  if (!res.ok) {
-    const err = await res.json().catch(()=>({}));
-    throw new Error(err.message || 'Erro HTTP '+res.status);
+  };
+
+  try {
+    // Tentativa 1: chamada direta
+    return await tryFetch(zapiUrl, opts);
+  } catch (err) {
+    // Se for erro de CORS/rede (TypeError), tenta via proxy
+    if (err instanceof TypeError || (err.message && err.message.toLowerCase().includes('cors'))) {
+      const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(zapiUrl);
+      return await tryFetch(proxyUrl, opts);
+    }
+    throw err;
   }
-  return res.json();
 }
 
 async function sendWhatsApp(r) {
   const cfg = getZAPIConfig();
-  if (!cfg.instance) {
-    toast('Configure a Z-API em Integrações para enviar WhatsApp reais','warning');
-    return;
-  }
+  if (!cfg.instance) { toast('Configure a Z-API em Integrações para enviar WhatsApp reais','warning'); return; }
   const client = state.clients.find(c=>c.id===r.clientId);
   if (!client?.phone) { toast('Cliente sem WhatsApp cadastrado','warning'); return; }
 
@@ -1722,23 +1633,21 @@ async function sendWhatsApp(r) {
     addActivity(`💬 WhatsApp enviado para <strong>${r.clientName}</strong>`, '✅');
     save(); renderAll(); toast(`WhatsApp enviado para ${client.name}!`,'success');
   } catch(e) {
-    toast('Falha no WhatsApp: '+e.message,'warning');
+    toast('Falha no WhatsApp: ' + e.message, 'warning');
   }
 }
 
-// ── INTEGRATION UI ───────────────────────────────────────
+// ── INTEGRATION UI ────────────────────────────────────
 function updateIntegrationUI() {
   const ejs  = getEmailJSConfig();
   const zapi = getZAPIConfig();
-
   const ejsOk  = !!(ejs.pubkey && ejs.service && ejs.template);
   const zapiOk = !!(zapi.instance && zapi.token);
 
-  // Populate fields
   if (document.getElementById('ejs-pubkey')) {
-    document.getElementById('ejs-pubkey').value   = ejs.pubkey;
-    document.getElementById('ejs-service').value  = ejs.service;
-    document.getElementById('ejs-template').value = ejs.template;
+    document.getElementById('ejs-pubkey').value    = ejs.pubkey;
+    document.getElementById('ejs-service').value   = ejs.service;
+    document.getElementById('ejs-template').value  = ejs.template;
     document.getElementById('zapi-instance').value = zapi.instance;
     document.getElementById('zapi-token').value    = zapi.token;
     document.getElementById('zapi-testnum').value  = zapi.testnum;
@@ -1755,7 +1664,6 @@ function updateIntegrationUI() {
   }
 }
 
-// Lazy script loader
 function loadScript(src) {
   return new Promise((res,rej)=>{
     if (document.querySelector(`script[src="${src}"]`)) { res(); return; }
@@ -1770,13 +1678,11 @@ function deleteReminder(id) {
   save(); renderAll(); toast('Lembrete removido');
 }
 
-// ── TASKS ─────────────────────────────────────────────
 function saveTask() {
   const desc = document.getElementById('t-desc').value.trim();
   if (!desc) { toast('Descreva a tarefa','warning'); return; }
   const task = {
-    id: Date.now(),
-    desc,
+    id: Date.now(), desc,
     due: document.getElementById('t-due').value,
     urgent: document.getElementById('t-urgent').value === '1',
     done: false
@@ -1791,21 +1697,14 @@ function toggleTask(id) {
   if (t) { t.done = !t.done; save(); renderAll(); }
 }
 
-// ── ACTIVITY ────────────────────────────────────────────
 function addActivity(text, icon='📌') {
   state.activities.unshift({ text, icon, time: new Date().toLocaleTimeString('pt-BR', {hour:'2-digit',minute:'2-digit'}) });
   if (state.activities.length > 10) state.activities.pop();
 }
 
-// ── RENDER ───────────────────────────────────────────────
 function renderAll() {
-  renderStats();
-  renderClients();
-  renderReminders();
-  renderActivity();
-  renderTasks();
-  renderDevSignups();
-  updateBadges();
+  renderStats(); renderClients(); renderReminders();
+  renderActivity(); renderTasks(); renderDevSignups(); updateBadges();
 }
 
 function renderStats() {
@@ -1828,13 +1727,10 @@ function renderClients() {
   }
   grid.innerHTML = state.clients.map(c=>{
     const statusLabel = {active:'Ativo',pending:'Pendente',inactive:'Inativo'}[c.status];
-    return `<div class="client-card" data-search="${c.name.toLowerCase()} ${c.company.toLowerCase()} ${c.status}">
+    return `<div class="client-card" data-search="${c.name.toLowerCase()} ${(c.company||'').toLowerCase()} ${c.status}">
       <div class="client-card-header">
         <div class="client-avatar ${c.color}">${c.name.charAt(0).toUpperCase()}</div>
-        <div>
-          <div class="client-name">${c.name}</div>
-          <div class="client-company">${c.company||'—'}</div>
-        </div>
+        <div><div class="client-name">${c.name}</div><div class="client-company">${c.company||'—'}</div></div>
         <span class="status-badge ${c.status}">${statusLabel}</span>
       </div>
       <div class="client-meta">
@@ -1854,18 +1750,13 @@ function renderClients() {
 
 function scheduleFor(id) {
   openModal('reminder');
-  setTimeout(()=>{
-    const sel = document.getElementById('r-client');
-    if (sel) sel.value = id;
-  },50);
+  setTimeout(()=>{ const sel = document.getElementById('r-client'); if (sel) sel.value = id; }, 50);
 }
 
 function renderReminders() {
   const list = document.getElementById('reminder-list');
   if (!state.reminders.length) {
-    list.innerHTML = `<div class="empty-state">
-      <div class="big-icon">🔔</div><h3>Nenhum lembrete agendado</h3>
-      <p>Crie lembretes automáticos para nunca perder um prazo</p></div>`;
+    list.innerHTML = `<div class="empty-state"><div class="big-icon">🔔</div><h3>Nenhum lembrete agendado</h3><p>Crie lembretes automáticos para nunca perder um prazo</p></div>`;
     return;
   }
   const statusLabels = { scheduled:'Agendado', sent:'Enviado', overdue:'Atrasado' };
@@ -1876,15 +1767,11 @@ function renderReminders() {
         <strong>${r.reason} — ${r.clientName}</strong>
         <span>${r.message||'Sem mensagem personalizada'}</span>
       </div>
-      <div class="reminder-date">
-        <strong>${formatDate(r.date)}</strong>
-        <span>${r.type}</span>
-      </div>
+      <div class="reminder-date"><strong>${formatDate(r.date)}</strong><span>${r.type}</span></div>
       <span class="reminder-status ${r.status}">${statusLabels[r.status]}</span>
       ${r.status==='scheduled'?`<button class="action-btn" style="width:auto;padding:6px 12px;font-size:0.78rem" onclick="sendNow(${r.id})">Enviar agora</button>`:''}
       <button class="action-btn" style="width:auto;padding:6px 10px;font-size:0.78rem" onclick="deleteReminder(${r.id})">✕</button>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 function renderActivity() {
@@ -1919,7 +1806,6 @@ function updateBadges() {
   document.getElementById('badge-reminders').textContent = state.reminders.filter(r=>r.status==='scheduled').length;
 }
 
-// ── UTILS ────────────────────────────────────────────────
 function formatDate(d) {
   if (!d) return '—';
   const [y,m,day] = d.split('-');
@@ -1935,125 +1821,85 @@ function toast(msg, type='') {
   setTimeout(()=>el.remove(), 3200);
 }
 
-// Click outside modal to close
 document.querySelectorAll('.modal-overlay').forEach(overlay=>{
-  overlay.addEventListener('click', e=>{
-    if (e.target===overlay) overlay.classList.remove('open');
-  });
+  overlay.addEventListener('click', e=>{ if (e.target===overlay) overlay.classList.remove('open'); });
 });
 
-// ── DEMO DATA ────────────────────────────────────────────
 function renderDevSignups() {
   const root = document.getElementById('dev-signups-list');
   if (!root) return;
-
   const list = (state.devSignups || []);
   if (!list.length) {
-    root.innerHTML = `<div class="empty-state" style="padding:30px 0">
-      <div class="big-icon" style="font-size:2rem">🧪</div>
-      <h3>Nenhum cadastro ainda</h3>
-      <p>Crie uma conta para aparecer aqui.</p>
-    </div>`;
+    root.innerHTML = `<div class="empty-state" style="padding:30px 0"><div class="big-icon" style="font-size:2rem">🧪</div><h3>Nenhum cadastro ainda</h3><p>Crie uma conta para aparecer aqui.</p></div>`;
     return;
   }
-
-  root.innerHTML = list
-    .slice(0, 50)
-    .map(s => {
-      const statusLabel = s.status === 'new' ? 'Novo' : (s.status || '—');
-      return `<div class="reminder-item" style="margin-bottom:12px">
-        <div class="reminder-type email" style="width:44px;height:44px">🧾</div>
-        <div class="reminder-info" style="padding-right:10px">
-          <strong style="font-size:0.95rem">${escapeHtml(s.name || '—')}</strong>
-          <span style="display:block; margin-top:4px">${escapeHtml(s.email || '—')}</span>
-          <span style="display:block">${escapeHtml(s.job || '—')}</span>
-          <span style="display:block; margin-top:6px; color:rgba(240,237,232,0.6)">${escapeHtml(s.createdAt || '')}</span>
-        </div>
-        <span class="reminder-status scheduled" style="align-self:flex-start; height:max-content">${escapeHtml(statusLabel)}</span>
-      </div>`;
-    })
-    .join('');
-
+  root.innerHTML = list.slice(0,50).map(s=>{
+    const statusLabel = s.status === 'new' ? 'Novo' : (s.status || '—');
+    return `<div class="reminder-item" style="margin-bottom:12px">
+      <div class="reminder-type email" style="width:44px;height:44px">🧾</div>
+      <div class="reminder-info" style="padding-right:10px">
+        <strong style="font-size:0.95rem">${escapeHtml(s.name||'—')}</strong>
+        <span style="display:block;margin-top:4px">${escapeHtml(s.email||'—')}</span>
+        <span style="display:block">${escapeHtml(s.job||'—')}</span>
+        <span style="display:block;margin-top:6px;color:rgba(240,237,232,0.6)">${escapeHtml(s.createdAt||'')}</span>
+      </div>
+      <span class="reminder-status scheduled" style="align-self:flex-start;height:max-content">${escapeHtml(statusLabel)}</span>
+    </div>`;
+  }).join('');
   const badge = document.getElementById('badge-dev');
   if (badge) badge.textContent = list.length;
 }
 
 function clearDevSignups() {
   state.devSignups = [];
-  save();
-  renderDevSignups();
+  save(); renderDevSignups();
   const badge = document.getElementById('badge-dev');
   if (badge) badge.textContent = '0';
   toast('Cadastros da Área Dev limpos','success');
 }
 
 function filterDevSignups(q) {
-  const query = (q || '').toLowerCase().trim();
-  const list = (state.devSignups || []);
-  const filtered = list.filter(s => {
-    const hay = `${s.name||''} ${s.email||''} ${s.job||''}`.toLowerCase();
-    return hay.includes(query);
-  });
+  const query = (q||'').toLowerCase().trim();
+  const filtered = (state.devSignups||[]).filter(s=>`${s.name||''} ${s.email||''} ${s.job||''}`.toLowerCase().includes(query));
   const root = document.getElementById('dev-signups-list');
   if (!root) return;
-
   if (!filtered.length) {
-    root.innerHTML = `<div class="empty-state" style="padding:30px 0">
-      <div class="big-icon" style="font-size:2rem">🧪</div>
-      <h3>Nenhum resultado</h3>
-      <p>Não encontramos cadastros com esse termo.</p>
-    </div>`;
+    root.innerHTML = `<div class="empty-state" style="padding:30px 0"><div class="big-icon" style="font-size:2rem">🧪</div><h3>Nenhum resultado</h3></div>`;
     return;
   }
-
-  root.innerHTML = filtered
-    .slice(0, 50)
-    .map(s => {
-      const statusLabel = s.status === 'new' ? 'Novo' : (s.status || '—');
-      return `<div class="reminder-item" style="margin-bottom:12px">
-        <div class="reminder-type email" style="width:44px;height:44px">🧾</div>
-        <div class="reminder-info" style="padding-right:10px">
-          <strong style="font-size:0.95rem">${escapeHtml(s.name || '—')}</strong>
-          <span style="display:block; margin-top:4px">${escapeHtml(s.email || '—')}</span>
-          <span style="display:block">${escapeHtml(s.job || '—')}</span>
-          <span style="display:block; margin-top:6px; color:rgba(240,237,232,0.6)">${escapeHtml(s.createdAt || '')}</span>
-        </div>
-        <span class="reminder-status scheduled" style="align-self:flex-start; height:max-content">${escapeHtml(statusLabel)}</span>
-      </div>`;
-    })
-    .join('');
+  root.innerHTML = filtered.slice(0,50).map(s=>{
+    const statusLabel = s.status === 'new' ? 'Novo' : (s.status || '—');
+    return `<div class="reminder-item" style="margin-bottom:12px">
+      <div class="reminder-type email" style="width:44px;height:44px">🧾</div>
+      <div class="reminder-info" style="padding-right:10px">
+        <strong style="font-size:0.95rem">${escapeHtml(s.name||'—')}</strong>
+        <span style="display:block;margin-top:4px">${escapeHtml(s.email||'—')}</span>
+        <span style="display:block">${escapeHtml(s.job||'—')}</span>
+        <span style="display:block;margin-top:6px;color:rgba(240,237,232,0.6)">${escapeHtml(s.createdAt||'')}</span>
+      </div>
+      <span class="reminder-status scheduled" style="align-self:flex-start;height:max-content">${escapeHtml(statusLabel)}</span>
+    </div>`;
+  }).join('');
 }
-
 
 function exportDevSignups() {
   const list = state.devSignups || [];
-  const payload = {
-    exportedAt: new Date().toISOString(),
-    count: list.length,
-    devSignups: list
-  };
+  const payload = { exportedAt: new Date().toISOString(), count: list.length, devSignups: list };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url;
-  a.download = 'freelio-dev-signups.json';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
+  a.href = url; a.download = 'freelio-dev-signups.json';
+  document.body.appendChild(a); a.click(); a.remove();
   URL.revokeObjectURL(url);
 }
 
 function escapeHtml(str) {
   return String(str)
-    .replaceAll('&','&amp;')
-    .replaceAll('<','<')
-    .replaceAll('>','>')
-    .replaceAll('"','"')
-    .replaceAll("'",'&#039;');
+    .replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
+    .replaceAll('"','&quot;').replaceAll("'",'&#039;');
 }
 
 function loadDemoData() {
-
   state.clients = [
     { id:1, name:'Marcos Oliveira', company:'TechStartup Ltda', email:'marcos@techstartup.com.br', phone:'(11) 98765-4321', project:'Site institucional', value:4500, status:'active', color:'color-2', createdAt:'10/05/2025' },
     { id:2, name:'Juliana Mendes', company:'Studio Criativo', email:'ju@studiocriativo.com', phone:'(21) 99123-4567', project:'Identidade visual', value:2800, status:'active', color:'color-3', createdAt:'15/05/2025' },
